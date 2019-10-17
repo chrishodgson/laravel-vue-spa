@@ -42,7 +42,7 @@
                     .get('/api/users')
                     .then(response => {
                         this.loading = false;
-                        this.users = response.data;
+                        this.users = response.data.data;
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
